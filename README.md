@@ -2,6 +2,99 @@
 A simple portfolio system for static HTML sites.
 
 ## description:
-Pfolio.html is a simple one file... or maby two file gallery/portfolio solution
+Pfolio.html is a simple one file... or maby two file gallery/portfolio solution.
+The aim is to provide static sites with a simple to understand, copy-and-paste type solution to make an immage gallery apear on their static site.
 
-this github page is under construction!
+### Development and aproaches:
+Pfolio.html is thus far developed solely by me, an amature hoby-dev, so im happy to merge any pull requests that improve on security, adds in some best practices, or that simply makes the code less dumb.
+
+However, there are a few things i am quite adamant about keeping inspite of their strangeness:
+1. The clumping together of JS, CSS, and HTML based on what "component" of the script they are related to
+           Reason:    This keeps the code easier to parse when it comes to the newbie user who might just want to copy paste a part of the code for use in their site.
+2. Usage of the over all system whereby the Pfolio.html file contains all of the reused styling and code to make the gallery work, the information about the location and name of the galery image files is stored in a separate file, and the setting of variables related to the function and presentation of the gallery is input in the individual.
+           Reason:    It fits my usecase! and it makes it relatively simple to have a semi-hardcoded aproach where, should you want to change the immage files and descriptions without having to edit a bunch of html, you simply have to upload the images in question and make a DirContentList.js file to match! or even better use the provided script to autogenerate those from a filder of apropriately named files! [WORK IN PROGRESS]
+
+##Documentation:
+      ------  
+        <script> LangNR = 0 ; </script>  
+        <script src="EXAMPLE-DirContentList.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+          <script>
+              $(function(){
+              $('.PFOLIO').load("Pfolio.html"); 
+              });
+          </script>
+          <div class="PFOLIO"></div>
+      -------
+      Snutten ovan bör finnas i värden (html-filen som ska använda denna).
+
+      DirContentList.js ser ut på ett ungefär såhär och behöver innehålla detta:
+      <script>
+      picFiles = ["foo.png", "bar.png"]    //namn på alla bildfiler i directoryt 
+      picDir = "/public/Portfolio/"        //path till directoryt 
+      </script>
+      Namnet på bildfilen används som beskrivningen (<p id=imgext>), d.v.s. texten som visas under bilden i storbildsvyn. 
+      Bildfilers namn kan innehålla en separator [ !NEWLANG! ] för att trigga flerspråksläge, där texten efter [ !NEWLANG! ] är språk 1 och texten innan är språk 0.
+      Namnet på bildfilen skulle således kunna vara:
+      [  foo_-_ord_och_meningar_!NEWLANG!_foo_-_words_and_sentences.png  ] 
+      här används understräck istället för mellanslag! (dessa byts ut mot mellanslag i runtime så understräck är inte möjliga att använda i beskrivningar)
+      ser det så ut så kommer koden välja språk baserat på variabeln [ LangNR ] definierad i värdsfilen (som definerad ovan). 
+      du kan även ha flera språk än så men koden är inte testad ordentligt för det ändamålet. 
+      Bindesträcket med mellanslag (understräck) på var sida skiljer namn och beskrivning.
+      
+      Mer info finns att hitta på projektets GitHub!
+  
+    INFO EN:
+      [  
+        <script> LangNR = 0 ; </script>  
+        <script src="EXAMPLE-DirContentList.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function(){
+            $('.PFOLIO').load("Pfolio.html"); 
+            });
+        </script>
+        <div class="PFOLIO"></div>
+      ]
+      The snippet above should be included in the host (the HTML file that intends to use Pfolio.html).
+      this example uses JQuery and is, thus far, the only code at all tested.
+  
+      DirContentList.js looks something like this and needs to contain the following:
+      [
+        <script>
+        picFiles = [“foo.png”, “bar.png”]    //names of all image files in the directory 
+        picDir = “/public/Portfolio/”        //path to the directory 
+        </script>
+      ]
+      The name of the image file is used as the description (<p id=imgext>), i.e., the text displayed below the image in the big-picture view (<div id="displayBox"...). 
+      Image file names can contain a separator [ !NEWLANG! ] to trigger multilingual mode, where the text after [ !NEWLANG! ] is language 1 and the text before is language 0.
+      The name of an image file could thus be:
+      [  foo_-_ord_och_meningar_!NEWLANG!_foo_-_words_and_sentences.png  ] 
+      Here, underscores are used instead of spaces! (These are replaced with spaces at runtime, so underscores cannot be used in descriptions)
+      If it looks like this, the code will select the language based on the variable [ LangNR ] defined in the host file (as defined above). 
+      You can also have more languages than that, but the code hasn’t been thoroughly tested for that purpose. 
+      The hyphen with spaces on either side separates the name and the description.
+      
+      More info can be found on the project’s GitHub!
+
+    LICENSE:
+      This project is published under the FlimpMIT license  
+      
+      Copyright (c) 2026 Filippos Kokkalis
+
+      Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
+      to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+      and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+      The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+      You are, however, allowed to not include all information as long as proper credit is given to the project this licence is applied to.
+      Minimal credit is defined as follows: 
+      Pfolio.html was made by Filippos Kokkalis and used in this project under the conditions of a modified MIT licence.
+      The licence and all other parts of the project can be found at <link to repo> 
+
+      In adition. should You (the person using this software in any capacity) and I (Filippos Kokkalis) meet, 
+      you owe me a small symbolic gift such as a cheap snack or a trinket found on the ground.
+
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+      WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
