@@ -55,7 +55,15 @@ The hyphen with spaces (underscores) on either side ``_-_`` separates the name a
 
 #### TLDR:
 1. Copy the Pfolio.html file into your websites source code.
-2. Make your DirContentList.js file and the folder with your imagefiles as specified above and copy these into your websites source code.
+2. Make your DirContentList.js file and the folder with your imagefiles as specified above and copy these into your websites source code. An example for the contents of DirContentList.js is provided below
+
+```
+<script>
+picFiles = [“foo.png”, “bar.png”]    //names of all image files in the directory 
+picDir = “/public/Portfolio/”        //path to the directory 
+</script>
+```
+   
 3. Copy the following code snippet into the HTML file of the page the Pfolio image galery should appear in, replacing the <path-to-DirContentList.js> and <path-to-Pfolio.html> with the paths to the specified files as well as setting the LangNR variable to the relevant value if multiple language mode is to be used.
 
 ```
@@ -72,6 +80,8 @@ The hyphen with spaces (underscores) on either side ``_-_`` separates the name a
 
 4. Edit the Css in Pfolio.html to match your desired look! [ making the css more variable driven and easily edditable is in the works ]
 
+#### additional info:
+the project has so far only been tested with .png immages and with limited special characters! that is to say only english alphanumerics as well as Å, Ä, and Ö. so please make a feature suggestion if further compatibility is needed! 
 
 ## LICENSE:
 
