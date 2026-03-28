@@ -24,11 +24,7 @@ However, there are a few things i am quite adamant about keeping inspite of thei
 <script> LangNR = 0 ; </script>  
 <script src="<path-to-DirContentList.js>"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script>
- $(function(){
- $('.PFOLIO').load("  <path-to-Pfolio.html>  "); 
- });
-</script>
+<script> $(function(){ $('.PFOLIO').load("  <path-to-Pfolio.html>  "); }); </script>
 <div class="PFOLIO"></div>
 ```  
 
@@ -70,11 +66,7 @@ picDir = “/public/Portfolio/”        //path to the directory
 <script> LangNR = 0 ; </script>  
 <script src="<path-to-DirContentList.js>"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-<script>
- $(function(){
- $('.PFOLIO').load("  <path-to-Pfolio.html>  "); 
- });
-</script>
+<script> $(function(){ $('.PFOLIO').load("  <path-to-Pfolio.html>  "); }); </script>
 <div class="PFOLIO"></div>
 ```  
 
