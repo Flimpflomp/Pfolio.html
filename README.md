@@ -16,7 +16,7 @@ However, there are a few things i am quite adamant about keeping inspite of thei
 
 ##Documentation: 
     INFO EN:
-      [  
+      ```
         <script> LangNR = 0 ; </script>  
         <script src="EXAMPLE-DirContentList.js"></script>
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -26,19 +26,19 @@ However, there are a few things i am quite adamant about keeping inspite of thei
             });
         </script>
         <div class="PFOLIO"></div>
-      ]
+      ```  
       The snippet above should be included in the host (the HTML file that intends to use Pfolio.html).
       this example uses JQuery and is, thus far, the only code at all tested.
   
       DirContentList.js looks something like this and needs to contain the following:
-      [
+      ```
         <script>
         picFiles = [“foo.png”, “bar.png”]    //names of all image files in the directory 
         picDir = “/public/Portfolio/”        //path to the directory 
         </script>
-      ]
-      The name of the image file is used as the description (<p id=imgext>), i.e., the text displayed below the image in the big-picture view (<div id="displayBox"...). 
-      Image file names can contain a separator [ !NEWLANG! ] to trigger multilingual mode, where the text after [ !NEWLANG! ] is language 1 and the text before is language 0.
+      ```
+      The name of the image file is used as the description, i.e., the text displayed below the image in the big-picture view. 
+      Image file names can contain a separator `` !NEWLANG! `` to trigger multilingual mode, where the text after [ !NEWLANG! ] is language 1 and the text before is language 0.
       The name of an image file could thus be:
       [  foo_-_ord_och_meningar_!NEWLANG!_foo_-_words_and_sentences.png  ] 
       Here, underscores are used instead of spaces! (These are replaced with spaces at runtime, so underscores cannot be used in descriptions)
