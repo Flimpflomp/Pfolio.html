@@ -14,8 +14,10 @@ However, there are a few things i am quite adamant about keeping inspite of thei
 2. Usage of the over all system whereby the Pfolio.html file contains all of the reused styling and code to make the gallery work, the information about the location and name of the galery image files is stored in a separate file, and the setting of variables related to the function and presentation of the gallery is input in the individual.
            Reason:    It fits my usecase! and it makes it relatively simple to have a semi-hardcoded aproach where, should you want to change the immage files and descriptions without having to edit a bunch of html, you simply have to upload the images in question and make a DirContentList.js file to match! or even better use the provided script to autogenerate those from a filder of apropriately named files! [WORK IN PROGRESS]
 
-##Documentation: 
+##Documentation:
+
     INFO EN:
+    
       ```
         <script> LangNR = 0 ; </script>  
         <script src="EXAMPLE-DirContentList.js"></script>
@@ -27,16 +29,19 @@ However, there are a few things i am quite adamant about keeping inspite of thei
         </script>
         <div class="PFOLIO"></div>
       ```  
+      
       The snippet above should be included in the host (the HTML file that intends to use Pfolio.html).
       this example uses JQuery and is, thus far, the only code at all tested.
   
       DirContentList.js looks something like this and needs to contain the following:
+      
       ```
         <script>
         picFiles = [“foo.png”, “bar.png”]    //names of all image files in the directory 
         picDir = “/public/Portfolio/”        //path to the directory 
         </script>
       ```
+      
       The name of the image file is used as the description, i.e., the text displayed below the image in the big-picture view. 
       Image file names can contain a separator `` !NEWLANG! `` to trigger multilingual mode, where the text after [ !NEWLANG! ] is language 1 and the text before is language 0.
       The name of an image file could thus be:
