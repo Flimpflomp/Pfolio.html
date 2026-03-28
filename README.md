@@ -14,7 +14,7 @@ However, there are a few things i am quite adamant about keeping inspite of thei
 2. Usage of the over all system whereby the Pfolio.html file contains all of the reused styling and code to make the gallery work, the information about the location and name of the galery image files is stored in a separate file, and the setting of variables related to the function and presentation of the gallery is input in the individual.
            Reason:    It fits my usecase! and it makes it relatively simple to have a semi-hardcoded aproach where, should you want to change the immage files and descriptions without having to edit a bunch of html, you simply have to upload the images in question and make a DirContentList.js file to match! or even better use the provided script to autogenerate those from a filder of apropriately named files! [WORK IN PROGRESS]
 
-##Documentation:
+## Documentation:
 
     INFO EN:
     
