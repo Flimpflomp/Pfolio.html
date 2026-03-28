@@ -43,19 +43,20 @@ picDir = “/public/Portfolio/”        //path to the directory
 ```
 
 The name of the image file is used as the description, i.e., the text displayed below the image in the big-picture view. 
-Image file names can contain a separator `` !NEWLANG! `` to trigger multilingual mode, where the text after [ !NEWLANG! ] is language 1 and the text before is language 0.
+Image file names can contain a separator `` !NEWLANG! `` to trigger multilingual mode, where the text after `` !NEWLANG! `` is language 1 and the text before is language 0.
 The name of an image file could thus be:
-[  foo_-_ord_och_meningar_!NEWLANG!_foo_-_words_and_sentences.png  ] 
+`` foo_-_ord_och_meningar_!NEWLANG!_foo_-_words_and_sentences.png ``   
 Here, underscores are used instead of spaces! (These are replaced with spaces at runtime, so underscores cannot be used in descriptions)
-If it looks like this, the code will select the language based on the variable [ LangNR ] defined in the host file (as defined above). 
+If it looks like this, the code will select the language based on the variable `` LangNR `` defined in the host file (as defined above). 
 You can also have more languages than that, but the code hasn’t been thoroughly tested for that purpose. 
-The hyphen with spaces on either side separates the name and the description.
+The hyphen with spaces (underscores) on either side ``_-_`` separates the name and the description.
 
-More info can be found on the project’s GitHub!
+## LICENSE:
 
-LICENSE:
-This project is published under the FlimpMIT license  
+This project is published under a modified MIT license
+the FlimpMIT licence is defined as folows:
 
+```
 Copyright (c) 2026 Filippos Kokkalis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
@@ -66,11 +67,14 @@ The above copyright notice and this permission notice shall be included in all c
 You are, however, allowed to not include all information as long as proper credit is given to the project this licence is applied to.
 Minimal credit is defined as follows: 
 Pfolio.html was made by Filippos Kokkalis and used in this project under the conditions of a modified MIT licence.
-The licence and all other parts of the project can be found at <link to repo> 
+The licence and all other parts of the project can be found at [ https://github.com/Flimpflomp/Pfolio.html ]
 
-      In adition. should You (the person using this software in any capacity) and I (Filippos Kokkalis) meet, 
-      you owe me a small symbolic gift such as a cheap snack or a trinket found on the ground.
+In adition. should you (the person using this software in any capacity) and I (Filippos Kokkalis) meet, 
+you owe me a small symbolic gift such as a cheap snack or a trinket found on the ground.
 
-      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-      WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+feel free to copy this snippet into a file in your project or in an HTML comment on your website! 
