@@ -53,10 +53,29 @@ If it looks like this, the code will select the language based on the variable `
 You can also have more languages than that, but the code hasn’t been thoroughly tested for that purpose. 
 The hyphen with spaces (underscores) on either side ``_-_`` separates the name and the description.
 
+#### TLDR:
+1. Copy the Pfolio.html file into your websites source code.
+2. Make your DirContentList.js file and the folder with your imagefiles as specified above and copy these into your websites source code.
+3. Copy the following code snippet into the HTML file of the page the Pfolio image galery should appear in, replacing the <path-to-DirContentList.js> and <path-to-Pfolio.html> with the paths to the specified files as well as setting the LangNR variable to the relevant value if multiple language mode is to be used.
+
+```
+<script> LangNR = 0 ; </script>  
+<script src="<path-to-DirContentList.js>"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+ $(function(){
+ $('.PFOLIO').load("  <path-to-Pfolio.html>  "); 
+ });
+</script>
+<div class="PFOLIO"></div>
+```  
+
+4. Edit the Css in Pfolio.html to match your desired look! [ making the css more variable driven and easily edditable is in the works ]
+
+
 ## LICENSE:
 
-This project is published under a modified MIT license
-the FlimpMIT licence is defined as folows:
+This project is published under a modified MIT license, the FlimpMIT licence, which is defined as folows for this project:
 
 ```
 Copyright (c) 2026 Filippos Kokkalis
@@ -71,7 +90,7 @@ Minimal credit is defined as follows:
 Pfolio.html was made by Filippos Kokkalis and used in this project under the conditions of a modified MIT licence.
 The licence and all other parts of the project can be found at [ https://github.com/Flimpflomp/Pfolio.html ]
 
-In adition. should you (the person using this software in any capacity) and I (Filippos Kokkalis) meet, 
+In adition. should you (the person using this software in any capacity for your project) and I (Filippos Kokkalis) meet, 
 you owe me a small symbolic gift such as a cheap snack or a trinket found on the ground.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
