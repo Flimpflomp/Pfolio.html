@@ -19,8 +19,6 @@ However, there are a few things i am quite adamant about keeping inspite of thei
 
 ## Documentation:
 
-INFO EN:
-
 ```
 <script> LangNR = 0 ; </script>  
 <script src="EXAMPLE-DirContentList.js"></script>
