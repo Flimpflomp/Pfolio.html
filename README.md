@@ -14,36 +14,7 @@ However, there are a few things i am quite adamant about keeping inspite of thei
 2. Usage of the over all system whereby the Pfolio.html file contains all of the reused styling and code to make the gallery work, the information about the location and name of the galery image files is stored in a separate file, and the setting of variables related to the function and presentation of the gallery is input in the individual.
            Reason:    It fits my usecase! and it makes it relatively simple to have a semi-hardcoded aproach where, should you want to change the immage files and descriptions without having to edit a bunch of html, you simply have to upload the images in question and make a DirContentList.js file to match! or even better use the provided script to autogenerate those from a filder of apropriately named files! [WORK IN PROGRESS]
 
-##Documentation:
-      ------  
-        <script> LangNR = 0 ; </script>  
-        <script src="EXAMPLE-DirContentList.js"></script>
-        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-          <script>
-              $(function(){
-              $('.PFOLIO').load("Pfolio.html"); 
-              });
-          </script>
-          <div class="PFOLIO"></div>
-      -------
-      Snutten ovan bör finnas i värden (html-filen som ska använda denna).
-
-      DirContentList.js ser ut på ett ungefär såhär och behöver innehålla detta:
-      <script>
-      picFiles = ["foo.png", "bar.png"]    //namn på alla bildfiler i directoryt 
-      picDir = "/public/Portfolio/"        //path till directoryt 
-      </script>
-      Namnet på bildfilen används som beskrivningen (<p id=imgext>), d.v.s. texten som visas under bilden i storbildsvyn. 
-      Bildfilers namn kan innehålla en separator [ !NEWLANG! ] för att trigga flerspråksläge, där texten efter [ !NEWLANG! ] är språk 1 och texten innan är språk 0.
-      Namnet på bildfilen skulle således kunna vara:
-      [  foo_-_ord_och_meningar_!NEWLANG!_foo_-_words_and_sentences.png  ] 
-      här används understräck istället för mellanslag! (dessa byts ut mot mellanslag i runtime så understräck är inte möjliga att använda i beskrivningar)
-      ser det så ut så kommer koden välja språk baserat på variabeln [ LangNR ] definierad i värdsfilen (som definerad ovan). 
-      du kan även ha flera språk än så men koden är inte testad ordentligt för det ändamålet. 
-      Bindesträcket med mellanslag (understräck) på var sida skiljer namn och beskrivning.
-      
-      Mer info finns att hitta på projektets GitHub!
-  
+##Documentation: 
     INFO EN:
       [  
         <script> LangNR = 0 ; </script>  
